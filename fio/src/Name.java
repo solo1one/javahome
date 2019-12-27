@@ -7,40 +7,33 @@ public class Name {
     public static void main(String[] args) {
 
         String fio;
-
-        System.out.println("Введите Фамилию Имя Отчество");
-        Scanner sFio = new Scanner(System.in);
-        fio = sFio.nextLine();
-
-        if (fio.indexOf(" ") == fio.lastIndexOf(" "))
-        {
-            System.out.println("madness");
-        } else {
-
-            String name = fio.substring(0, fio.indexOf(" "));
-            String midName = fio.substring(fio.indexOf(" "), fio.lastIndexOf(" "));
-            String lastName = fio.substring(fio.lastIndexOf(" "));
-            System.out.println(lastName);
-        }
+        int i = 0;
 
 
-        /*if (nameVal(fio)){
-            String[] words = fio.split("\\s");
-            lastName = words[0];
-            name = words[1];
-            midName = words[2];
-            System.out.println("фамилия: " + lastName + '\n' + "имя: " + name + '\n' + "отчество: " + midName);
-        }
-        else {
-            System.out.println("Неверный ввод");
+        for (;;) {
+            System.out.println("Введите Фамилию Имя Отчество");
+            Scanner sFio = new Scanner(System.in);
+            fio = (sFio.nextLine()).trim();
+
+            for (int j = 0; j < fio.length(); j++) {
+                char a = fio.charAt(j);
+                if (a == ' ') {
+                    i++;
+                }
+            }
+            if (i != 2) {
+                System.out.println("неправильный формат ввода");
+            }
+            else {
+                String name = fio.substring(0, fio.indexOf(" "));
+                String midName = fio.substring(fio.indexOf(" "), fio.lastIndexOf(" "));
+                String lastName = fio.substring(fio.lastIndexOf(" "));
+                System.out.println("Имя: " + name + "\n" + "Фамилия: " + midName + "\n" + "Отчество: " + lastName);
+                break;
+            }
+
         }
     }
 
-
-    private static boolean nameVal(String fio){
-        Pattern validFio = Pattern.compile("[А-Яа-яA-Za-z]+'\\s' [А-Яа-яA-Za-z]+'\\s' [А-Яа-яA-Za-z]+");
-        Matcher trueFio = validFio.matcher(fio);
-        return trueFio.matches();*/
-
-    }
 }
+
