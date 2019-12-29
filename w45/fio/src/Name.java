@@ -25,10 +25,8 @@ public class Name {
                 System.out.println("неправильный формат ввода");
             }
             else {
-                String name = fio.substring(0, fio.indexOf(" "));
-                String midName = fio.substring(fio.indexOf(" "), fio.lastIndexOf(" "));
-                String lastName = fio.substring(fio.lastIndexOf(" "));
-                System.out.println("Имя: " + name + "\n" + "Фамилия: " + midName + "\n" + "Отчество: " + lastName);
+                String[] words = fio.split("\\s");
+                System.out.println("фамилия: " + words[0] + '\n' + "имя: " + words[1]  + '\n' + "отчество: " + words[2]);
                 break;
             }
 
