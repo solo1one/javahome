@@ -7,22 +7,17 @@ public class Loader {
 
         //////////////////////////////////////////////////////////////////////////////////////////////////
 
+        String[] money = text.replaceAll("[^0-9,]","").split(",");
+        int[] moneyInt = new int[money.length];
+        int totalMoney = 0;
+        int sum = 0;
 
-        int moneyVasya;
-        int moneyPetya;
-        int moneyMasha;
-        int totalSumm;
+        for (int i = 0; i < moneyInt.length; i++ ){
+            moneyInt[i] = Integer.parseInt(money[i]);
+            sum += moneyInt[i];
+        }
 
-        String vas = text.substring((text.indexOf(' ') + 1),(text.indexOf("рубл")));
-        moneyVasya = Integer.parseInt(vas.substring(vas.indexOf(' ')).trim());
-
-        String pet = text.substring((text.indexOf('-') + 2),(text.indexOf("рубля")-1));
-        moneyPetya = Integer.parseInt(pet);
-
-        moneyMasha = Integer.parseInt(text.substring((text.lastIndexOf('-') + 2),text.lastIndexOf("рублей")-1));
-        //правильно ли так собирать все в одну строку (в плане читаемости)
-
-        totalSumm = moneyMasha + moneyPetya + moneyVasya;
-        System.out.println("Вместе они заработали " + totalSumm);
+        System.out.println("Вместе они заработали " + sum);
+        
     }
 }
