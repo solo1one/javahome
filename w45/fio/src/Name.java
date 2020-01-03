@@ -14,18 +14,17 @@ public class Name {
             System.out.println("Введите Фамилию Имя Отчество");
             Scanner sFio = new Scanner(System.in);
             fio = (sFio.nextLine()).trim();
-
             for (int j = 0; j < fio.length(); j++) {
                 char a = fio.charAt(j);
                 if (a == ' ') {
                     i++;
                 }
             }
-            if (i != 2) {
+                // сделал как вы посоветовали
+            String[] words = fio.split("\\s");
+            if (words.length != 3) {
                 System.out.println("неправильный формат ввода");
-            }
-            else {
-                String[] words = fio.split("\\s");
+            } else {
                 System.out.println("фамилия: " + words[0] + '\n' + "имя: " + words[1]  + '\n' + "отчество: " + words[2]);
                 break;
             }
