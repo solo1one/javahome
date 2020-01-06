@@ -1,6 +1,6 @@
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class DateOf {
 
@@ -8,12 +8,19 @@ public class DateOf {
 
         LocalDate birthday = LocalDate.of(1992, 1, 24);
         LocalDate nextBirthday = birthday;
+        LocalDate today = LocalDate.now();
+        int numberBd = 0;
+        DateTimeFormatter printFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy", new Locale("ru"));
 
-        Period p = Period.between(birthday, LocalDate.now());
-
-        for (int i = 0; i <= p.getYears() - 1; i++) {
+        while(today.isAfter(nextBirthday)) {
+            System.out.println((numberBd++ ) + "й день рождения " + nextBirthday.format(DateTimeFormatter.ofPattern("dd MMMM yyyy года - EEEE", new Locale("ru"))));
             nextBirthday = nextBirthday.plusYears(1);
-            System.out.println((i + 1) + "й день рождения " + nextBirthday.format(DateTimeFormatter.ofPattern("dd MMMM yyyy года - EEEE")));
+
+
+                if (today.isBefore(nextBirthday))break;
         }
+
+
+
     }
 }
