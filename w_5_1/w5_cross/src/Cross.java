@@ -24,14 +24,3 @@ public class Cross {
         }
     }
 }
-
-/*  x       x
-     x     x
-      x  x
-       x
-     x  x
-    x    x
-   x      x
-
-
-*/
