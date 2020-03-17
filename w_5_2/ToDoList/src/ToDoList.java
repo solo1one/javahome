@@ -1,109 +1,151 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ToDoList {
-    public static ArrayList<String> todoList = new ArrayList<>();
+
+    static private final String COMMAND_ADD = "(?i)^ADD\\s[А-Яа-яA-Za-z]";
+    static private final String COMMAND_ADD_TO_INDEX = "(?i)^ADD\\s\\d+\\s[А-Яа-яA-Za-z]";
+    static private final String COMMAND_EDIT = "(?i)^EDIT\\s\\d+\\s[А-Яа-яA-Za-z]";
+    static private final String COMMAND_DELETE = "(?i)^DELETE\\s\\d+";
+    static private final String COMMAND_LIST = "(?i)LIST";
+    static private final String MAN_MAN = "(?i)MAN";
+
+    static private ArrayList<String> toDoList = new ArrayList<>();
+
 
     public static void main(String[] args) {
+
+        System.out.println("use MAN to see  command list");
+
+        for (; ; ) {
+            Scanner scanner = new Scanner(System.in);
+            String commandByScanner = scanner.nextLine();
+            if (getValueToString(commandByScanner, MAN_MAN)) {
+                printMan();
+            } else {
+                setChangeToArrayList(commandByScanner);
+            }
+        }
+    }
+
+// как вы советовали вытащил определение комманды из цикла
+    static private void setChangeToArrayList(String command) {
+        if (getValueToString(command, COMMAND_LIST)) {
+            printToDoList();
+        } else if (getValueToString(command, COMMAND_ADD)) {
+            addToArrayList(command);
+        } else if (getValueToString(command, COMMAND_ADD_TO_INDEX)) {
+            AddToArrayListByIndex(command);
+        } else if (getValueToString(command, COMMAND_EDIT)) {
+            editToArrayListByIndex(command);
+        } else if (getValueToString(command, COMMAND_DELETE)) {
+            deleteToArrayListByIndex(command);
+        } else {
+            System.out.println("WRONG COMMAND");
+        }
+    }
+
+    static private boolean getValueToString(String string, String pattern) {
+        boolean check = false;
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(string);
+        if (m.find()) {
+            check = true;
+        }
+        return check;
+    }
+
+    static private void addToArrayList(String command) {
+        String clearString = textThisCommand(command, ToDoList.COMMAND_ADD);
+        toDoList.add(clearString);
+    }
+
+    static private void AddToArrayListByIndex(String command) {
+        String clearString = textThisCommand(command, ToDoList.COMMAND_ADD_TO_INDEX);
+        int indexTask = numberIndexThisCommand(command)-1;
+
+        if (indexTask < toDoList.size()) {
+            toDoList.add(indexTask, clearString);
+        } else {
+            System.out.println(indexTask + " added to end");
+            toDoList.add(clearString);
+        }
+    }
+
+    static private void editToArrayListByIndex(String command) {
+        String clearString = textThisCommand(command, ToDoList.COMMAND_EDIT);
+        int indexTask = numberIndexThisCommand(command)-1;
+
+        if (indexTask < toDoList.size()) {
+            toDoList.add(indexTask, clearString);
+            toDoList.remove(indexTask + 1);
+        } else {
+            System.out.println("Task number " + indexTask+1 + " not found");
+        }
+    }
+
+    static private void deleteToArrayListByIndex(String command) {
+        int indexTask = numberIndexThisCommand(command)-1;
+        if (indexTask < toDoList.size()) {
+            toDoList.remove(indexTask);
+        } else {
+            System.out.println("Task number " + indexTask+1 + "not found");
+        }
+    }
+
+    static private void printToDoList() {
+        if (toDoList.size() == 0)
+        {
+            System.out.println("Empty");
+        }
+        for (int i = 0; i < toDoList.size(); i++) {
+            System.out.println(i+1 + " " + toDoList.get(i));
+        }
+    }
+
+    static private void printMan() {
         System.out.println("command list \n " +
-                "list - show task list\n " +
-                "add \"number \" - create new task (can use without number)\n " +
-                "edit \"number \" - use for edit task always use with number of task \n " +
-                "del \"number \" - delete task number always use with number of task");
+                "add - to add task in end of list \n " +
+                "add by index - add in specialize list position \n " +
+                "delete by index - delete task by number \n" +
+                "edit by index - to edit task with number \n " +
+                "list - to see task list" +
+                "man - to see that again " );
+    }
 
-        for (;;) {
-            //первое обработать ввод
-            System.out.println("input command");
-            Scanner commandIn = new Scanner(System.in);
-            String commandInString = (commandIn.nextLine()).trim();
-            Pattern pattern = Pattern.compile("(?i)(^LIST|^ADD|^EDIT|^DELETE)([\\s*\\d*\\s*]*)([^\1\2]*)");
-            Matcher matcher = pattern.matcher(commandInString);
 
-            String command = null;
-            int positionNumber = 0;
-            String todoText = null;
 
-            while (matcher.find()){
-                command = matcher.group(1).toUpperCase();
-                positionNumber = posNum(matcher.group(2));
-                todoText = matcher.group(3);
-            }
-            assert command != null;
-
-            if (command.equals("LIST")){
-                list();
-            }
-            if (command.equals("ADD")){
-               add(positionNumber,todoText);
-            }
-            if (command.equals("EDIT")){
-                edit(positionNumber,todoText);
-            }
-            if (command.equals("DEL")){
-
-            }
-            
+    static private String textThisCommand(String command, String pattern) {
+        String clearText = "";
+        if (pattern.equals(COMMAND_ADD)) {
+            clearText = command.substring(command.indexOf(" ") + 1);
         }
-
-
-    }
-
-    private static void list(){
-            if (todoList.size() == 0){
-                System.out.println("is empty use add command to create new");
-            }else {
-                for (int i = 0; i < todoList.size(); i++){
-                    System.out.println("Task  № " + i + " "+ todoList.get(i));
-                }
-            }
-    }
-
-    private static int posNum(String posNum){
-        int positionNumber;
-        if (posNum.trim().length() == 0){
-            positionNumber = todoList.size();
-        }else{
-            positionNumber = Integer.parseInt(posNum.trim());
+        if (pattern.equals(COMMAND_ADD_TO_INDEX)) {
+            clearText = command.substring(command.indexOf(" "));
+            clearText = clearText.trim();
+            clearText = clearText.substring(clearText.indexOf(" "));
+            System.out.println(clearText);
         }
-        return positionNumber;
-    }
-    private static boolean numberValue(int positionNumber){
-        boolean numberValue = false;
-        if(positionNumber > todoList.size()){
-            numberValue = true;
+        if (pattern.equals(COMMAND_EDIT)) {
+            clearText = command.substring(command.indexOf(" "));
+            clearText = clearText.trim();
+            clearText = clearText.substring(clearText.indexOf(" "));
         }
-        return numberValue;
+        return clearText.trim();
     }
 
-    private static void add(int positionNumber,String todoText){
-        if (numberValue(positionNumber)){
-            positionNumber = todoList.size();
-        }else {
-            todoList.add(positionNumber,todoText);
+
+    static private int numberIndexThisCommand(String command) {
+        int numberIndex;
+        String string = command.substring(command.indexOf(" ")).trim();
+        string += " ";
+        numberIndex = Integer.parseInt(string.substring(0, string.indexOf(" ")));
+        if (numberIndex == 0)
+        {
+            numberIndex = 1;
         }
+        return numberIndex;
     }
-
-    private static void edit (int positionNumber, String todoText){
-        if (numberValue(positionNumber)){
-            System.out.println(todoList.size() == 0 ? "is empty use add to create" : "task not found" );
-        }else{
-            todoList.remove(positionNumber);
-            todoList.add(positionNumber, todoText);
-            list();
-        }
-
-    }
-    private static void delite (int positionNumber){
-        if (numberValue(positionNumber)){
-            System.out.println(todoList.size() == 0 ? "is empty use add to create" : "task not found" );
-        }else {
-            todoList.remove(positionNumber);
-        }
-    }
-
-
 }
