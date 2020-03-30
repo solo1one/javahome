@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Email {
 
-    static private final String VALID_EMAIL = "^[A-Za-z0-9+_.-]+@(.+)$ ";
+    static private final String VALID_EMAIL = "^(?i)ADD\\s[A-Za-z0-9+_.-]+@(.+)$";
     static private HashSet<String> emailList = new HashSet<>();
 
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Email {
             String commandByScanner = scanner.nextLine();
 
             if (validEmail(commandByScanner)){
-                emailList.add(commandByScanner);
+                emailList.add(commandByScanner.substring(3).trim());
             }else if (commandByScanner.equalsIgnoreCase("list")){
                 for (String word : emailList){
                     System.out.println(word);
@@ -24,20 +24,11 @@ public class Email {
                 System.out.println("ERROR");
             }
         }
-
     }
 
     public static boolean validEmail(String commandByScanner){
-        boolean check = false;
-
-        Pattern p = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
-        Matcher m = p.matcher(commandByScanner);
-        if(m.find()){
-            check = true;
-        }
-        return check;
+        return commandByScanner.matches(VALID_EMAIL);
     }
-
 
 }
 
