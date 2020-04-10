@@ -1,11 +1,9 @@
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Email {
 
-    static private final String VALID_EMAIL = "^(?i)ADD\\s[A-Za-z0-9+_.-]+@(.+)$";
+    static private final String VALID_EMAIL = "(?i)ADD\\s[A-Za-z0-9+_.-]+@(.+)$";
     static private HashSet<String> emailList = new HashSet<>();
 
     public static void main(String[] args) {
@@ -15,15 +13,19 @@ public class Email {
             String commandByScanner = scanner.nextLine();
 
             if (validEmail(commandByScanner)){
-                emailList.add(commandByScanner.substring(3).trim());
+                emailList.add(commandByScanner.substring(commandByScanner.indexOf(" ")).trim());
             }else if (commandByScanner.equalsIgnoreCase("list")){
-                for (String word : emailList){
-                    System.out.println(word);
-                }
+                listCommand();
             }else {
                 System.out.println("ERROR");
             }
         }
+    }
+    public static void listCommand (){
+        for (String word : emailList){
+        System.out.println(word);
+    }
+
     }
 
     public static boolean validEmail(String commandByScanner){
