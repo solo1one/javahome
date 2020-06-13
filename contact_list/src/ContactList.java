@@ -85,7 +85,7 @@ public class ContactList {
             if (inputName.matches(REG_NAME)){
                 return inputName;
             }else {
-                System.out.println("error Name must contains at least three letters and name can't have any digits ");
+                System.out.println("error Name must contains letters and name can't start at digits ");
             }
         }
     }
