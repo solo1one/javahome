@@ -27,29 +27,62 @@ public class ContactList {
             if (inputString.equalsIgnoreCase(COMMAND_LIST)){
                 printBook();
                 continue;
-            }
-            if (isPhoneNumber(inputString)){
-                findOrAddUser(inputString);
             } else {
-                findOrAddNum(inputString);
-            }
+                findOrAddContactInfo(inputString);}
+
         } while (!inputString.equalsIgnoreCase(COMMAND_EXIT));
         scanner.close();
+    }
+
+// решил так же вытащить конструкцию  из цикла но кажется название метода выбрал не совсем правильное есть какие замечания ?
+    private static void findOrAddContactInfo(String inputString){
+        if (isPhoneNumber(inputString)){
+        if (userExist(inputString)){
+            showUser(inputString);
+        }else {
+            addUser(inputString);
+        }
+    } else {
+        if(numberExist(inputString)){
+            showNum(inputString);
+        } else {
+            addNum(inputString);
+        }
+    }
+
     }
 
     private static boolean isPhoneNumber(String inputString){
         return inputString.matches(CONTACT_INFO_NUM_REGEX);
     }
-
-    private static void findOrAddNum(String inputString){
-        if (contacts.containsKey(inputString)){
-            System.out.println("User number is " + contacts.get(inputString));
+// В таких ситуациях стоит создавать отдельный метод или стоит просто использовать ".contains" и подобные ему методы без лишней писанины ?
+// вроде код становится понятнее но его становится больше.
+    private static boolean userExist(String inputString) {
+        if (contacts.containsValue(inputString)) {
+            return true;
         } else {
+            return false;
+        }
+    }
+
+    private static boolean numberExist(String inputString){
+        if (contacts.containsKey(inputString)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //Разделил как вы порекомендовали
+    private static void showNum(String inputString){
+        System.out.println("User number is " + contacts.get(inputString));
+    }
+
+    private static void addNum(String inputString){
             System.out.println("Number not found!\\n Input number to add");
             contacts.put(inputString,inputNumberCheck());
             System.out.println("Done");
-        }
     }
+
 
     private static String inputNumberCheck (){
         for(;;){
@@ -61,22 +94,21 @@ public class ContactList {
             }
         }
     }
-
-    private static void findOrAddUser(String inputString){
+//Разделил как вы порекомендовали
+    private static void showUser(String inputString){
         inputString = inputString.replaceAll("\\D","");
-        if (contacts.containsValue(inputString)){
             String finalInputString = inputString;
-            // Почему он рекомендует кусок кода ниже как лямда вырфжение?
             contacts.forEach((key, value)-> {
                 if(value.equals(finalInputString)){
                     System.out.println("User name is " + key);
                 }
             });
-        } else {
-            System.out.println("Contact not found.\\n Please type new contact's name");
-            contacts.put(inputNameCheck(),inputString);
-            System.out.println("Done");
-        }
+
+    }
+    private static void addUser(String inputString){
+        System.out.println("Contact not found.\\n Please type new contact's name");
+        contacts.put(inputNameCheck(),inputString);
+        System.out.println("Done");
     }
 
     private static String inputNameCheck (){
