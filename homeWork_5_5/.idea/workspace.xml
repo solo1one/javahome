@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="798023f4-78b1-43ad-a37f-b8b2a7e5b918" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../contact_list/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/contact_list.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/out/production/contact_list/ContactList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_list/src/ContactList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeWork_5_5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork_5_5/CoolNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CoolNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/charCode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/out/production/charCode/charNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/charCode/src/charNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/dictionaries/samael.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/Name.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/out/production/Name/Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/fio/src/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/out/production/zpKoroche/Loader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/src/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w44/zpKoroche/zpKoroche.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/TelephoneNumber.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/out/production/TelephoneNumber/Phone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/TelephoneNumber/src/Phone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/WordsLorem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/out/production/WordsLorem/Words.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/WordsLorem/src/Words.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/dictionaries/samael.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/Name.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/out/production/Name/Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/fio/src/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/out/production/zpKoroche/Loader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/src/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w45/zpKoroche/zpKoroche.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/DateOf.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/out/production/DateOf/DateOf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/DateOf/src/DateOf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/out/production/testCalendar/TestCalendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/src/TestCalendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w46/testCalendar/testCalendar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/out/production/w5_array/rainbow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/src/rainbow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_array/w5_array.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/out/production/w5_cross/Cross.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/src/Cross.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_cross/w5_cross.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/Hospital.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/out/production/Hospital/Hospital.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_1/w5_hospital/src/Hospital.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/ToDoList.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/out/production/ToDoList/ToDoList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_2/ToDoList/src/ToDoList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/Email.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/out/production/Email/Email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w_5_3/src/Email.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1grMHERhfX65sRyDerijBC4Ie2J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CoolNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CoolNum" />
+      <module name="homeWork_5_5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CoolNum" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="798023f4-78b1-43ad-a37f-b8b2a7e5b918" name="Default Changelist" comment="" />
+      <created>1598868169899</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598868169899</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="75" width="1051" height="882" key="#Project_Structure" timestamp="1599021617344">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="434" y="75" width="1051" height="882" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1599021617344" />
+    <state x="738" y="282" width="424" height="519" key="FileChooserDialogImpl" timestamp="1599058539443">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="738" y="282" width="424" height="519" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1599058539443" />
+    <state width="1870" height="304" key="GridCell.Tab.0.bottom" timestamp="1599062407003">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="304" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1599062407003" />
+    <state width="1870" height="304" key="GridCell.Tab.0.center" timestamp="1599062407002">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="304" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1599062407002" />
+    <state width="1870" height="304" key="GridCell.Tab.0.left" timestamp="1599062407002">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="304" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1599062407002" />
+    <state width="1870" height="304" key="GridCell.Tab.0.right" timestamp="1599062407003">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="304" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1599062407003" />
+    <state x="516" y="117" width="947" height="737" key="SettingsEditor" timestamp="1598965686389">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="516" y="117" width="947" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1598965686389" />
+    <state x="554" y="148" width="802" height="781" key="new project wizard" timestamp="1599062405023">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="554" y="148" width="802" height="781" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1599062405023" />
+  </component>
+</project>
