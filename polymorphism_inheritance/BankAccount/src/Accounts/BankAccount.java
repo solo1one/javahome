@@ -35,18 +35,17 @@ public class BankAccount {
         return balance;
     }
 
-    //немного продублировал метод гет что бы Soutы не плодить для простого вывода, так можно делать или не стоит?
     public void balanceInfo(){
         System.out.println("Текуший баланс: " + balance);
     }
-
-    public boolean accountsTransaction(BankAccount receiver,double amount){
+   // тут невнимательность забыл про получателя, извиняюсь
+    public boolean send(BankAccount receiver, double amount){
        if(getBalance() < amount){
            System.out.println("Недостаточно средств");
            return false;
        }else{
            takeMoney(amount);
-           putMoney(amount);
+           receiver.putMoney(amount);
            System.out.println("Транзакция успешна");
            return true;
        }

@@ -5,9 +5,7 @@ import java.time.temporal.ChronoUnit;
 
 public class DepositAccount extends BankAccount {
 
-    private static final LocalDate today = LocalDate.now();
-    private static LocalDate lastAddDepositDay = today;
-    private static long period;
+    private LocalDate lastAddDepositDay = LocalDate.now();
 
     public DepositAccount(double money) {
         super(money);
@@ -17,38 +15,32 @@ public class DepositAccount extends BankAccount {
         if(money <= 0){
             System.out.println("ERROR try again");
         }else{
-            lastAddDepositDay=today.plusMonths(1);
-            period = ChronoUnit.DAYS.between(today,lastAddDepositDay);
+            lastAddDepositDay=LocalDate.now().plusMonths(1);
             super.putMoney(money);
         }
     }
 
     public void takeMoney(double money){
-            if (today.isAfter(lastAddDepositDay)||today.isEqual(lastAddDepositDay)){
+            if (LocalDate.now().isAfter(lastAddDepositDay)||LocalDate.now().isEqual(lastAddDepositDay)){
                 super.takeMoney(money);
             }else {
-                System.out.println("Операция не доступна до оканчания периода " + period + " дней");
+                System.out.println("Операция не доступна до оканчания периода " + period() + " дней");
             }
     }
 
-
-    public double getBalance (){
-        return super.getBalance();
+     // метод создается для того что бы при каждом обращении к period иметь актуальную дату
+    //  понял спасибо, а то я даже не подумал об этом
+    private long period(){
+        return ChronoUnit.DAYS.between(LocalDate.now(),lastAddDepositDay);
     }
 
     public void balanceInfo(){
-        System.out.println("Депозитарный, счет средства можно снять после "+ period + " дней" );
+        System.out.println("Депозитарный, счет средства можно снять после "+ period() + " дней" );
         super.balanceInfo();
     }
 
-    public boolean accountsTransaction (BankAccount receiver,double amount){
-        if (today.isAfter(lastAddDepositDay)||today.isEqual(lastAddDepositDay)){
-            return super.accountsTransaction(receiver,amount);
-        }else {
-            System.out.println("Депозитарный период "+ period + " дней транзакция невозможна");
-            return false;
-        }
-    }
-
-
+       // то есть весь этот код ниже писал напрасно, даже сделал хуже(в плане производительности и простоты)
+      //  он исполнися как должно без различных дополнений
+     //   т.к. условия уже прописаны в takeMoney и он лишь продублировал действия которые не нужны
+    //    я правильно понял свою ошибку?
 }
