@@ -22,7 +22,7 @@ public class Main {
 
         CardAccount cardAccount = new CardAccount(8000);
         cardAccount.takeMoney(1000);
-        cardAccount.send(standardAccount,9100);
+        cardAccount.send(standardAccount,1000);
         cardAccount.balanceInfo();
 
 
