@@ -1,6 +1,6 @@
 package ClientsType;
 
-public class  IndividualEntrepreneur extends Client{
+public class IndividualEntrepreneur extends Client {
 
     public IndividualEntrepreneur(double balance) {
         super(balance);
@@ -16,18 +16,21 @@ public class  IndividualEntrepreneur extends Client{
 
     @Override
     public void putMoney(double amount) {
-        if(amount <= 1000 && amount > 0){
-            double commision = amount * 0.01;
-            System.out.println("Коммисия составила: " + commision);
-            amount = getBalance()+amount-commision;
-            super.putMoney(amount);
-        }if(amount >= 1000){
-            double commision = amount * 0.005;
-            System.out.println("Коммисия составила: " + commision);
-            amount = getBalance()+amount-commision;
-            super.putMoney(amount);
-        }else {
-            System.out.println("Некоректный ввод");
+        double commissionPercent;
+        double commission;
+
+        if (amount <= 1000 && amount > 0) {
+            commissionPercent = 0.01;
         }
+        if (amount >= 1000) {
+            commissionPercent = 0.05;
+        } else {
+            System.out.println("Некоректный ввод");
+            return;
+        }
+        commission = amount * commissionPercent;
+        System.out.println("Коммисия составила: " + commission);
+        amount = getBalance() + amount - commission;
+        super.putMoney(amount);
     }
 }
