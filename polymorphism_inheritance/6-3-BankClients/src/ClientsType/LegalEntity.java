@@ -2,6 +2,7 @@ package ClientsType;
 
 public class LegalEntity extends Client {
 
+    private final double TAKE_COMMISSION_PERCENT = 0.01;
 
     public LegalEntity(double balance) {
         super(balance);
@@ -14,16 +15,13 @@ public class LegalEntity extends Client {
     }
 
     @Override
-    public void takeMoney(double amount) {
-        double commission = amount * 0.01;
-        if (amount + commission <= getBalance() && amount > 0) {
-            super.takeMoney(amount);// отнять от суммы здесь будет не правильно человек 1000 снимает вышло 990 хотелось что бы комисия списывалась молча так сказать
-            //setBalance(getBalance() - commission);
-            super.takeMoney(commission);// использоапл конструкцию выше так как не хотел выводить << "Вы сняли: " + amount >>
+    public boolean takeMoney(double amount) {
+        double commission = amount * TAKE_COMMISSION_PERCENT;
+        if (super.takeMoney(amount + commission)) {
             System.out.println("Коммисия составит: " + commission);
             System.out.println("Баланс после снятия комисси: " + getBalance());
-        } else {
-            System.out.println("Некоректный ввод");
+            return true;
         }
+        return false;
     }
 }

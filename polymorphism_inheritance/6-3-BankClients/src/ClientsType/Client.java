@@ -9,12 +9,14 @@ abstract public class Client {
 
     public abstract void info();
 
-    public void takeMoney(double amount) {
+    public boolean takeMoney(double amount) {
         if (amount > getBalance() || amount <= 0) {
             System.out.println("Некоректный ввод или недостаточно средств");
+            return false;
         } else {
             setBalance(getBalance() - amount);
-            System.out.println("Вы сняли: " + amount + "\nБаланс: " + getBalance());
+            System.out.println("Снятие: " + amount + "\nБаланс: " + getBalance());
+            return true;
         }
     }
 
